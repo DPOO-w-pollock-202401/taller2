@@ -41,9 +41,7 @@ public class SandboxMapas
      */
     public List<String> getValoresComoLista( )
     {
-    	List<String> valor = new java.util.ArrayList<String>(mapaCadenas.values());
-        java.util.Collections.sort(valor);
-        return valor;
+    	return null;
     }
 
     /**
@@ -52,9 +50,7 @@ public class SandboxMapas
      */
     public List<String> getLlavesComoListaInvertida( )
     {
-    	List<String> keys = new java.util.ArrayList<String>(mapaCadenas.keySet());
-        java.util.Collections.sort(keys, java.util.Collections.reverseOrder());
-        return keys;
+    	return null;
     }
 
     /**
@@ -166,11 +162,11 @@ public class SandboxMapas
      */
     public void volverMayusculas( )
     {
-    	Map<String, String> newMap = new HashMap<String, String>();
+    	Map<String, String> mapaM = new HashMap<String, String>();
         for (String key : mapaCadenas.keySet()) {
-            newMap.put(key.toUpperCase(), mapaCadenas.get(key));
+            mapaM.put(key.toUpperCase(), mapaCadenas.get(key));
         }
-        mapaCadenas = newMap;
+        mapaCadenas = mapaM;
     }
 
     /**
@@ -180,8 +176,8 @@ public class SandboxMapas
      */
     public boolean compararValores( String[] otroArreglo )
     {
-    	for (String value : otroArreglo) {
-            if (!mapaCadenas.values().contains(value)) {
+    	for (String valor : otroArreglo) {
+            if (!mapaCadenas.values().contains(valor)) {
                 return false;
             }
         }

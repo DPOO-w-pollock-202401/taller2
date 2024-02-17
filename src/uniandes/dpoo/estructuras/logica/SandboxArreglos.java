@@ -307,8 +307,8 @@ public class SandboxArreglos
     	if (arregloEnteros.length == 0) {
             return new int[0];
         }
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        int min = 0;
+        int max = 0;
         for (int i = 0; i < arregloEnteros.length; i++) {
             if (arregloEnteros[i] < min) {
                 min = arregloEnteros[i];
@@ -340,7 +340,7 @@ public class SandboxArreglos
      */
     public int contarEnterosRepetidos( )
     {
-        HashMap<Integer, Integer> histograma = calcularHistograma();
+        HashMap<Integer,Integer> histograma = calcularHistograma();
         return (int) histograma.values().stream().filter(valor -> valor > 1).count();
     }
 
